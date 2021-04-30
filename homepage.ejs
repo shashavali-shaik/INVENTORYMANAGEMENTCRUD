@@ -1,0 +1,63 @@
+<html lang = "en" >
+    <head>
+        <title>FASHIONNIKE</title>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width">
+        <link rel="Stylesheet" href = "Styles.css" >
+    </head>
+    <body class = "c4">
+        <h1 class = "c1">Nike</h1>
+        <h3 ><a href = "/create" class = "c2">Add New Product</a></h3>
+        <h3><a href = "/update-Stock" class = "c2">Update-Stock</a></h3>
+        <h3><a href = "/deleteproduct" class = "c2">Delete-Product</a></h3>
+        <h2>Welcome</h2>
+        <p class = "c3" ><b>FASHION NIKE LIMITED </b> a AMERICAN COMPANY. 
+            nike operates from purpose-built administrative and production facilities
+             opened in 2003 across from the historic Goodwood Circuit in Goodwood, West Sussex, England, 
+             United Kingdom. nike Limited is the exclusive manufacturer of nike since 2003.
+        </p>
+        <p class = "c3">
+            Although the Nike brand has been in use since 1906, the Rolls-Royce Motor Cars subsidiary of BMW 
+            AG has no direct relationship to Rolls-Royce-branded vehicles produced prior to 2003 other than being a 
+            major engine and other supplier prior to 2003. The Bentley Motors Limited subsidiary of Volkswagen AG is 
+            the direct successor to nike and various other predecessor entities that produced Rolls-Royce 
+            and Bentley branded cars between the foundation of each company and 2003, when the BMW-controlled entity started 
+            producing cars under the nike brand
+        </p>
+        <p class = "c3">
+            The nike Phantom four sedan was the first product offered for sale in 2003. Since then, 
+            the company has expanded its product line to include extended wheelbase, two-door coupé, and 
+            convertible versions of the Phantom Sedan, as well as the smaller Ghost four-door sedan, Wraith two-door coupé,
+             Dawn.
+        </p>
+
+        <center>
+            <table>
+                <tr>
+                    <th>Product Id</th>
+                    <th>category</th>
+                    <th>size</th>
+                    <th>stock</th>
+                    <th>price</th>
+                </tr>
+                <% for(var i=0;i<data.length;i++) {%>
+                    <tr>
+                        <td><%= data[i].pid %></td>
+                        <td><%= data[i].pname %></td>
+                        <td><%= data[i].psize %></td>
+                        <td><%= data[i].pstock %></td>
+                        <td><%= data[i].sp %></td>
+                    </tr>
+                    
+               <% } %>
+
+
+            </table>
+        </center>
+
+        <footer>
+            <b>Timeline of nike "just Do it"</b>
+        </footer>
+
+    </body>
+</html>
